@@ -1,0 +1,14 @@
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.ConsoleApp.deps.json
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.ConsoleApp.runtimeconfig.json
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.ConsoleApp.runtimeconfig.dev.json
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.ConsoleApp.dll
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.ConsoleApp.pdb
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.csproj.CoreCompileInputs.cache
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.AssemblyInfoInputs.cache
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.AssemblyInfo.cs
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.dll
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.pdb
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.csprojAssemblyReference.cache
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.Domain.dll
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/bin/Debug/netcoreapp2.1/Superbid.Domain.pdb
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.ConsoleApp/obj/Debug/netcoreapp2.1/Superbid.ConsoleApp.csproj.CopyComplete

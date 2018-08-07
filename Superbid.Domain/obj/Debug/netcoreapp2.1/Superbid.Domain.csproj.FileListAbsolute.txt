@@ -1,0 +1,12 @@
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/bin/Debug/netcoreapp2.1/Superbid.Domain.deps.json
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/bin/Debug/netcoreapp2.1/Superbid.Domain.dll
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/bin/Debug/netcoreapp2.1/Superbid.Domain.pdb
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/bin/Debug/netcoreapp2.1/MongoDB.Bson.dll
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/bin/Debug/netcoreapp2.1/MongoDB.Bson.xml
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.csprojAssemblyReference.cache
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.csproj.CoreCompileInputs.cache
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.AssemblyInfoInputs.cache
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.AssemblyInfo.cs
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.csproj.CopyComplete
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.dll
+/Users/georgegodas/projects/superbid-account-transfer/Superbid.Domain/obj/Debug/netcoreapp2.1/Superbid.Domain.pdb

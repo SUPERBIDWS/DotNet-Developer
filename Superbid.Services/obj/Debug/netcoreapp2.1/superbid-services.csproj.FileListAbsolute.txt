@@ -1,0 +1,14 @@
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/superbid-services.csprojAssemblyReference.cache
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/superbid-services.csproj.CoreCompileInputs.cache
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/superbid-services.AssemblyInfoInputs.cache
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/superbid-services.AssemblyInfo.cs
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/superbid-services.csproj.CopyComplete
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Services.deps.json
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Services.dll
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Services.pdb
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Domain.dll
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Repository.dll
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Domain.pdb
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/bin/Debug/netcoreapp2.1/Superbid.Repository.pdb
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/Superbid.Services.dll
+/Users/georgegodas/projects/superbid-account-transfer/superbid-services/obj/Debug/netcoreapp2.1/Superbid.Services.pdb
