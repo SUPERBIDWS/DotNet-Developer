@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>Superbid.Services</RootNamespace>
+    <AssemblyName>Superbid.Services</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Superbid.Domain\Superbid.Domain.csproj" />
+    <ProjectReference Include="..\Superbid.Repository\Superbid.Repository.csproj" />
+  </ItemGroup>
+</Project>
