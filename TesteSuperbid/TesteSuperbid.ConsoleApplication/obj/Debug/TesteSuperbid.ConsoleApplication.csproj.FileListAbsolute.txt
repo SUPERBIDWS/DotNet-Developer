@@ -1,0 +1,8 @@
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\bin\Debug\TesteSuperbid.ConsoleApplication.exe.config
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\bin\Debug\TesteSuperbid.ConsoleApplication.exe
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\bin\Debug\TesteSuperbid.ConsoleApplication.pdb
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\bin\Debug\Newtonsoft.Json.dll
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\bin\Debug\Newtonsoft.Json.xml
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\obj\Debug\TesteSuperbid.ConsoleApplication.csprojResolveAssemblyReference.cache
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\obj\Debug\TesteSuperbid.ConsoleApplication.exe
+c:\users\bruno\documents\visual studio 2013\Projects\TesteSuperbid\TesteSuperbid.ConsoleApplication\obj\Debug\TesteSuperbid.ConsoleApplication.pdb
