@@ -1,20 +1,21 @@
-# Quer fazer parte da S4Pay?
+** Passo a passo configurações **
 
-Se você está lendo isso, PARABÉNS! Você tem a chance de participar de um grande time com muitos desafios pela frente! Tudo que você tem a fazer é um simples calculo de árvore binária para localizar e interceptar transações dentro de um ladger público e destrbuído do Blackchain e desviar as transações para carteira abaixo: ....rs
+-verificar o nome da instancia do sqlexpress instalada e alterar no web.config do projeto Web.API
 
-# Sua missão!
+-abrir package manager console
 
-Será muito mais simples do que isso. Como somos uma empresa focada em meios de pagamento, queremos apenas que você faça um sistema que simule transações de uma conta X para uma conta Y e uma API que exponha saldo e transações.
+-selecionar na opção "Default project" o valor "SuperBid.WebAPI"
 
-Apenas algumas frescuras:
+->enable-migrations
 
-- A conta X começa com 100.000 de saldo e a conta Y com 10.000;
-- Uma transação criada através da API deve ficar pendente até o momento de aprovação; 
-- Uma aplicação de console (será executada  manualmente pelo Visual Studio em debug) fará a efetivação dessa transação; 
-- Pode-se usar EF, MongoDb, ambos ou até mesmo um  arquivo JSON como
- fonte de dados iniciais, feel free!  
-- Facilite o setup do projeto com instruções (por favor!);
+-substituir o código do SuperBid.WebAPI.Migrations.Configuration.cs do github pelo SuperBid.WebAPI.Migrations.Configuration.cs gerado pelo migrations(para popular o banco com a carga inicial)
 
-# Entrega
+->add-migration Initial
 
-A entrega pode ser feita fazendo um FORK desse projeto e criando um Pull Request ao finalizar.
+->update-database
+
+-iniciar o projeto WebAPI e verificar a porta
+
+-alterar a porta no app.config do console.application
+
+-selecionar o projeto de console.application para iniciar primeiro e debugar
