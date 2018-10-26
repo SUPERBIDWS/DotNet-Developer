@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4Pay.Domain", "S4Pay.Domain\S4Pay.Domain.csproj", "{3F5DA2CF-0589-4062-97E1-2C776964A203}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4Pay.Infrastructure", "S4Pay.Infrastructure\S4Pay.Infrastructure.csproj", "{F34EF2E7-B4CF-479E-8BF3-253757A4495F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4Pay.Service", "S4Pay.Service\S4Pay.Service.csproj", "{4F4BD52D-DD6C-4727-8221-604EDA441961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4Pay.Factory", "S4Pay.Factory\S4Pay.Factory.csproj", "{C876BB36-A235-417F-9751-FE8FE122ED7B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S4Pay.CrossCutting", "S4Pay.CrossCutting\S4Pay.CrossCutting.csproj", "{247A7DFB-4D00-4743-8BF4-3C4C45F8EF88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.S4Pay", "Api.S4Pay\Api.S4Pay.csproj", "{C4A50CD7-F92F-4AEF-BDF0-597244C57721}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F5DA2CF-0589-4062-97E1-2C776964A203}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F5DA2CF-0589-4062-97E1-2C776964A203}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F5DA2CF-0589-4062-97E1-2C776964A203}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F5DA2CF-0589-4062-97E1-2C776964A203}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34EF2E7-B4CF-479E-8BF3-253757A4495F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34EF2E7-B4CF-479E-8BF3-253757A4495F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34EF2E7-B4CF-479E-8BF3-253757A4495F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34EF2E7-B4CF-479E-8BF3-253757A4495F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F4BD52D-DD6C-4727-8221-604EDA441961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F4BD52D-DD6C-4727-8221-604EDA441961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F4BD52D-DD6C-4727-8221-604EDA441961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F4BD52D-DD6C-4727-8221-604EDA441961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C876BB36-A235-417F-9751-FE8FE122ED7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C876BB36-A235-417F-9751-FE8FE122ED7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C876BB36-A235-417F-9751-FE8FE122ED7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C876BB36-A235-417F-9751-FE8FE122ED7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{247A7DFB-4D00-4743-8BF4-3C4C45F8EF88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{247A7DFB-4D00-4743-8BF4-3C4C45F8EF88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{247A7DFB-4D00-4743-8BF4-3C4C45F8EF88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{247A7DFB-4D00-4743-8BF4-3C4C45F8EF88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4A50CD7-F92F-4AEF-BDF0-597244C57721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4A50CD7-F92F-4AEF-BDF0-597244C57721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4A50CD7-F92F-4AEF-BDF0-597244C57721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4A50CD7-F92F-4AEF-BDF0-597244C57721}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {675B3CD1-824B-493A-9397-03ADFC09F81B}
+	EndGlobalSection
+EndGlobal
