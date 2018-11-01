@@ -26,7 +26,7 @@ Para poder testar o sistema, utilizar a solution como execução, pois necessita
 O projeto foi feito em camadas. Poderiam ser incluídas mais camadas como por exemplo a de regra de negócios, mas optei por algo mais simples,
 pois já iria criar 5 projetos na solution.
 
-Primeiro você deverá visualiar o Sistema Transação, onde possui uma tela para realização de transaçãos, consultas de saldos nas duas contas e 
+Primeiro você deverá visualizar o Sistema Transação, onde possui uma tela para realização de transações, consultas de saldos nas duas contas e 
 uma lista com o histórico de transações realizadas. (Os IDs fixos não são uma boa prática de programação, mas foram usados apenas para facilitar 
 no desenvolvimento do teste).
 
@@ -34,7 +34,7 @@ Para cadastrar uma transação, escolha a conta de origem, a de destino e o valo
 
 Se a conta possuir o montante informado, ele será retirado do saldo da mesma e ficará pendente de aprovação.
 
-A API é o unico projeto que tem acesso a camada de dados, os outros consomem e enviam para ela as informações.
+A API é o único projeto que tem acesso a camada de dados, os outros consomem e enviam para ela as informações.
 
 Depois de realizar as transações desejadas, vá para a tela do console, onde você terá uma lista de opções para poder escolher.
 
