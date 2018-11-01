@@ -1,0 +1,156 @@
+﻿@model SistemaTransacao.Models.VMTransacoes
+
+<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+<script src="~/Scripts/inputmask/jquery.inputmask.bundle.js"></script>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Conta: @Model.ContaOrigem.NM_CONTA</h2>
+        <h2>Saldo: <span id="saldo1">R$ @string.Format("{0:0.00}", Model.ContaOrigem.SALDO_CONTA)</span> </h2>
+    </div>
+
+    <div class="col-md-6">
+        <h2>Conta: @Model.ContaDestino.NM_CONTA</h2>
+        <h2>Saldo: <span id="saldo2">R$ @string.Format("{0:0.00}", Model.ContaDestino.SALDO_CONTA)</span> </h2>
+    </div>
+
+    @if (!string.IsNullOrEmpty(Model.MensagemRetorno))
+    {
+        if (Model.boolRetorno)
+        {
+            <div class="col-md-12 alert alert-success" role="alert">
+                @Model.MensagemRetorno
+            </div>
+        }
+        else
+        {
+            <div class="col-md-12 alert alert-danger" role="alert">
+                @Model.MensagemRetorno
+            </div>
+        }
+    }
+
+    <div class="col-md-12" style="text-align: right;">
+        <button type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#transacao" onclick="Limpar()">
+            <span class="fa fa-plus"></span> <h4>Nova Transação</h4>
+        </button>
+        <a href="/Home" class="btn btn-info btn-ok"><h4>Atualizar</h4></a>
+    </div>
+
+    <div class="col-md-12" style="margin-top: 50px;">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Origem</th>
+                    <th scope="col">Destino</th>
+                    <th scope="col">Valor</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Data Transação</th>
+                    <th scope="col">Data Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Transacoes)
+                {
+                    string cor;
+
+                    switch (item.IDE_STATUS)
+                    {
+                        case 2:
+                            cor = "green";
+                            break;
+
+                        case 3:
+                            cor = "red";
+                            break;
+
+                        default:
+                            cor = "black";
+                            break;
+                    }
+
+                    <tr>
+                        <th scope="row">@item.ID_TRANSACAO</th>
+                        <td>@item.ORIGEM.NM_CONTA</td>
+                        <td>@item.DESTINO.NM_CONTA</td>
+                        <td>R$ @string.Format("{0:0.00}", item.VALOR)</td>
+                        <td style="color: @cor">@item.STATUS.NM_STATUS</td>
+                        <td>@item.DATA_TRANSACAO.Value.ToString("dd/MM/yyyy HH:mm")</td>
+                        <td>@(item.DATA_RESULTADO != null ? item.DATA_RESULTADO.Value.ToString("dd/MM/yyyy HH:mm") : "-")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="modal fade" id="transacao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @using (Html.BeginForm("EnviarTransacao", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "formTransacao", @name = "formTransacao" }))
+            {
+                <div class="modal-header">
+                    <h3>Transação</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="grid-form">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Transacao.IDE_CONTA_ORIGEM, htmlAttributes: new { @class = "control-label col-md-4" })
+                                <div class="col-md-6">
+                                    @Html.DropDownListFor(model => model.Transacao.IDE_CONTA_ORIGEM, new SelectList(Model.Contas, "ID_CONTA", "NM_CONTA"), "Selecione a Conta de Origem", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Transacao.IDE_CONTA_ORIGEM, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Transacao.IDE_CONTA_DESTINO, htmlAttributes: new { @class = "control-label col-md-4" })
+                                <div class="col-md-6">
+                                    @Html.DropDownListFor(model => model.Transacao.IDE_CONTA_DESTINO, new SelectList(Model.Contas, "ID_CONTA", "NM_CONTA"), "Selecione a Conta de Destino", new { @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Transacao.IDE_CONTA_DESTINO, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.Transacao.VALOR, htmlAttributes: new { @class = "control-label col-md-4" })
+                                <div class="col-md-6">
+                                    @Html.EditorFor(model => model.VALOR, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.Transacao.VALOR, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-md-12">
+                        <button id="btnCancelar" type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button id="btnConfirmar" type="submit" class="btn btn-success btn-ok">Confirmar</button>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function Limpar() {
+        $("#Transacao_IDE_CONTA_ORIGEM").val("");
+        $("#Transacao_IDE_CONTA_DESTINO").val("");
+        $("#VALOR").val("");
+    }
+
+    $(document).ready(function () {
+        $("#VALOR").inputmask('currency', {
+            "autoUnmask": true,
+            radixPoint: ",",
+            groupSeparator: ".",
+            allowMinus: false,
+            prefix: 'R$ ',
+            digits: 2,
+            digitsOptional: false,
+            rightAlign: true,
+            unmaskAsNumber: true
+        });
+    });
+</script>
