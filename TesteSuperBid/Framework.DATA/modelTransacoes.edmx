@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="baseTransacoesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_CONTAS">
+          <Key>
+            <PropertyRef Name="ID_CONTA" />
+          </Key>
+          <Property Name="ID_CONTA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NM_CONTA" Type="varchar" MaxLength="50" />
+          <Property Name="SALDO_CONTA" Type="float" />
+        </EntityType>
+        <EntityType Name="TB_STATUS">
+          <Key>
+            <PropertyRef Name="ID_STATUS" />
+          </Key>
+          <Property Name="ID_STATUS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NM_STATUS" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="TB_TRANSACOES">
+          <Key>
+            <PropertyRef Name="ID_TRANSACAO" />
+          </Key>
+          <Property Name="ID_TRANSACAO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDE_CONTA_ORIGEM" Type="int" />
+          <Property Name="IDE_CONTA_DESTINO" Type="int" />
+          <Property Name="VALOR" Type="float" />
+          <Property Name="IDE_STATUS" Type="int" />
+          <Property Name="DATA_TRANSACAO" Type="datetime" />
+          <Property Name="DATA_RESULTADO" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_TB_TRANSACOES_TB_CONTA_DESTINO">
+          <End Role="TB_CONTAS" Type="Self.TB_CONTAS" Multiplicity="0..1" />
+          <End Role="TB_TRANSACOES" Type="Self.TB_TRANSACOES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CONTAS">
+              <PropertyRef Name="ID_CONTA" />
+            </Principal>
+            <Dependent Role="TB_TRANSACOES">
+              <PropertyRef Name="IDE_CONTA_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TRANSACOES_TB_CONTA_ORIGEM">
+          <End Role="TB_CONTAS" Type="Self.TB_CONTAS" Multiplicity="0..1" />
+          <End Role="TB_TRANSACOES" Type="Self.TB_TRANSACOES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CONTAS">
+              <PropertyRef Name="ID_CONTA" />
+            </Principal>
+            <Dependent Role="TB_TRANSACOES">
+              <PropertyRef Name="IDE_CONTA_ORIGEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TRANSACOES_TB_STATUS">
+          <End Role="TB_STATUS" Type="Self.TB_STATUS" Multiplicity="0..1" />
+          <End Role="TB_TRANSACOES" Type="Self.TB_TRANSACOES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_STATUS">
+              <PropertyRef Name="ID_STATUS" />
+            </Principal>
+            <Dependent Role="TB_TRANSACOES">
+              <PropertyRef Name="IDE_STATUS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="baseTransacoesModelStoreContainer">
+          <EntitySet Name="TB_CONTAS" EntityType="Self.TB_CONTAS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_STATUS" EntityType="Self.TB_STATUS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TB_TRANSACOES" EntityType="Self.TB_TRANSACOES" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_TB_TRANSACOES_TB_CONTA_DESTINO" Association="Self.FK_TB_TRANSACOES_TB_CONTA_DESTINO">
+            <End Role="TB_CONTAS" EntitySet="TB_CONTAS" />
+            <End Role="TB_TRANSACOES" EntitySet="TB_TRANSACOES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TRANSACOES_TB_CONTA_ORIGEM" Association="Self.FK_TB_TRANSACOES_TB_CONTA_ORIGEM">
+            <End Role="TB_CONTAS" EntitySet="TB_CONTAS" />
+            <End Role="TB_TRANSACOES" EntitySet="TB_TRANSACOES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TRANSACOES_TB_STATUS" Association="Self.FK_TB_TRANSACOES_TB_STATUS">
+            <End Role="TB_STATUS" EntitySet="TB_STATUS" />
+            <End Role="TB_TRANSACOES" EntitySet="TB_TRANSACOES" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="baseTransacoesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="baseTransacoesEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_CONTAS" EntityType="baseTransacoesModel.TB_CONTAS" />
+          <EntitySet Name="TB_STATUS" EntityType="baseTransacoesModel.TB_STATUS" />
+          <EntitySet Name="TB_TRANSACOES" EntityType="baseTransacoesModel.TB_TRANSACOES" />
+          <AssociationSet Name="FK_TB_TRANSACOES_TB_CONTA_DESTINO" Association="baseTransacoesModel.FK_TB_TRANSACOES_TB_CONTA_DESTINO">
+            <End Role="TB_CONTAS" EntitySet="TB_CONTAS" />
+            <End Role="TB_TRANSACOES" EntitySet="TB_TRANSACOES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TRANSACOES_TB_CONTA_ORIGEM" Association="baseTransacoesModel.FK_TB_TRANSACOES_TB_CONTA_ORIGEM">
+            <End Role="TB_CONTAS" EntitySet="TB_CONTAS" />
+            <End Role="TB_TRANSACOES" EntitySet="TB_TRANSACOES" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TB_TRANSACOES_TB_STATUS" Association="baseTransacoesModel.FK_TB_TRANSACOES_TB_STATUS">
+            <End Role="TB_STATUS" EntitySet="TB_STATUS" />
+            <End Role="TB_TRANSACOES" EntitySet="TB_TRANSACOES" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="TB_CONTAS">
+          <Key>
+            <PropertyRef Name="ID_CONTA" />
+          </Key>
+          <Property Name="ID_CONTA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NM_CONTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SALDO_CONTA" Type="Double" />
+        </EntityType>
+        <EntityType Name="TB_STATUS">
+          <Key>
+            <PropertyRef Name="ID_STATUS" />
+          </Key>
+          <Property Name="ID_STATUS" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NM_STATUS" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="TB_TRANSACOES" Relationship="baseTransacoesModel.FK_TB_TRANSACOES_TB_STATUS" FromRole="TB_STATUS" ToRole="TB_TRANSACOES" />
+        </EntityType>
+        <EntityType Name="TB_TRANSACOES">
+          <Key>
+            <PropertyRef Name="ID_TRANSACAO" />
+          </Key>
+          <Property Name="ID_TRANSACAO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDE_CONTA_ORIGEM" Type="Int32" />
+          <Property Name="IDE_CONTA_DESTINO" Type="Int32" />
+          <Property Name="VALOR" Type="Double" />
+          <Property Name="IDE_STATUS" Type="Int32" />
+          <Property Name="DATA_TRANSACAO" Type="DateTime" Precision="3" />
+          <Property Name="DATA_RESULTADO" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DESTINO" Relationship="baseTransacoesModel.FK_TB_TRANSACOES_TB_CONTA_DESTINO" FromRole="TB_TRANSACOES" ToRole="TB_CONTAS" />
+          <NavigationProperty Name="ORIGEM" Relationship="baseTransacoesModel.FK_TB_TRANSACOES_TB_CONTA_ORIGEM" FromRole="TB_TRANSACOES" ToRole="TB_CONTAS" />
+          <NavigationProperty Name="STATUS" Relationship="baseTransacoesModel.FK_TB_TRANSACOES_TB_STATUS" FromRole="TB_TRANSACOES" ToRole="TB_STATUS" />
+        </EntityType>
+        <Association Name="FK_TB_TRANSACOES_TB_CONTA_DESTINO">
+          <End Type="baseTransacoesModel.TB_CONTAS" Role="TB_CONTAS" Multiplicity="0..1" />
+          <End Type="baseTransacoesModel.TB_TRANSACOES" Role="TB_TRANSACOES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CONTAS">
+              <PropertyRef Name="ID_CONTA" />
+            </Principal>
+            <Dependent Role="TB_TRANSACOES">
+              <PropertyRef Name="IDE_CONTA_DESTINO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TRANSACOES_TB_CONTA_ORIGEM">
+          <End Type="baseTransacoesModel.TB_CONTAS" Role="TB_CONTAS" Multiplicity="0..1" />
+          <End Type="baseTransacoesModel.TB_TRANSACOES" Role="TB_TRANSACOES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_CONTAS">
+              <PropertyRef Name="ID_CONTA" />
+            </Principal>
+            <Dependent Role="TB_TRANSACOES">
+              <PropertyRef Name="IDE_CONTA_ORIGEM" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TB_TRANSACOES_TB_STATUS">
+          <End Type="baseTransacoesModel.TB_STATUS" Role="TB_STATUS" Multiplicity="0..1" />
+          <End Type="baseTransacoesModel.TB_TRANSACOES" Role="TB_TRANSACOES" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TB_STATUS">
+              <PropertyRef Name="ID_STATUS" />
+            </Principal>
+            <Dependent Role="TB_TRANSACOES">
+              <PropertyRef Name="IDE_STATUS" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="baseTransacoesModelStoreContainer" CdmEntityContainer="baseTransacoesEntities">
+          <EntitySetMapping Name="TB_CONTAS">
+            <EntityTypeMapping TypeName="baseTransacoesModel.TB_CONTAS">
+              <MappingFragment StoreEntitySet="TB_CONTAS">
+                <ScalarProperty Name="SALDO_CONTA" ColumnName="SALDO_CONTA" />
+                <ScalarProperty Name="NM_CONTA" ColumnName="NM_CONTA" />
+                <ScalarProperty Name="ID_CONTA" ColumnName="ID_CONTA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_STATUS">
+            <EntityTypeMapping TypeName="baseTransacoesModel.TB_STATUS">
+              <MappingFragment StoreEntitySet="TB_STATUS">
+                <ScalarProperty Name="NM_STATUS" ColumnName="NM_STATUS" />
+                <ScalarProperty Name="ID_STATUS" ColumnName="ID_STATUS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TB_TRANSACOES">
+            <EntityTypeMapping TypeName="baseTransacoesModel.TB_TRANSACOES">
+              <MappingFragment StoreEntitySet="TB_TRANSACOES">
+                <ScalarProperty Name="DATA_RESULTADO" ColumnName="DATA_RESULTADO" />
+                <ScalarProperty Name="DATA_TRANSACAO" ColumnName="DATA_TRANSACAO" />
+                <ScalarProperty Name="IDE_STATUS" ColumnName="IDE_STATUS" />
+                <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+                <ScalarProperty Name="IDE_CONTA_DESTINO" ColumnName="IDE_CONTA_DESTINO" />
+                <ScalarProperty Name="IDE_CONTA_ORIGEM" ColumnName="IDE_CONTA_ORIGEM" />
+                <ScalarProperty Name="ID_TRANSACAO" ColumnName="ID_TRANSACAO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
