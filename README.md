@@ -51,3 +51,6 @@ As que forem reprovadas, o sistema retornará o saldo para a conta Origem.
 Espero ter atendido ao requisitado.
 
 Obrigado.
+
+** Para evitar problemas com a string de conexão, o banco de dados está alocado em um servidor gratuito, podendo ser lento ou 
+instável algumas vezes.
