@@ -18,3 +18,36 @@ Apenas algumas frescuras:
 # Entrega
 
 A entrega pode ser feita fazendo um FORK desse projeto e criando um Pull Request ao finalizar.
+
+-----------------------------------------------------------------------------------------------------------------------
+
+Para poder testar o sistema, utilizar a solution como execução, pois necessitamos dos 3 projetos rodando juntos. (Já está configurado)
+
+O projeto foi feito em camadas. Poderiam ser incluídas mais camadas como por exemplo a de regra de negócios, mas optei por algo mais simples,
+pois já iria criar 5 projetos na solution.
+
+Primeiro você deverá visualiar o Sistema Transação, onde possui uma tela para realização de transaçãos, consultas de saldos nas duas contas e 
+uma lista com o histórico de transações realizadas. (Os IDs fixos não são uma boa prática de programação, mas foram usados apenas para facilitar 
+no desenvolvimento do teste).
+
+Para cadastrar uma transação, escolha a conta de origem, a de destino e o valor desejado.
+
+Se a conta possuir o montante informado, ele será retirado do saldo da mesma e ficará pendente de aprovação.
+
+A API é o unico projeto que tem acesso a camada de dados, os outros consomem e enviam para ela as informações.
+
+Depois de realizar as transações desejadas, vá para a tela do console, onde você terá uma lista de opções para poder escolher.
+
+Ao escolher a opção 1, o programa irá buscar todas as transações pendentes.
+
+Aparecerá uma nova opção, para poder verificar essas transações e aprovar ou reprovar as mesmas.
+
+Você pode fazer uma e parar ou seguir validando as transações.
+
+As que forem aprovadas, o sistema liberará o saldo para a conta Destino.
+
+As que forem reprovadas, o sistema retornará o saldo para a conta Origem.
+
+Espero ter atendido ao requisitado.
+
+Obrigado.
